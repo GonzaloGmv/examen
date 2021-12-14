@@ -21,3 +21,15 @@ def movimiento(FILA, COLUMNA, TABLERO):
     elif FILA == 2:
         TABLERO[1][COLUMNA] = TABLERO[2][COLUMNA]
         TABLERO[2][COLUMNA] = ' '
+
+def cambio_ficha(FILA, COLUMNA, TABLERO):
+    if FILA == 0:
+        FILA = 1
+    elif FILA == 2:
+        FILA = 1
+    elif FILA == 1:
+        if TABLERO[2][COLUMNA] == ' ':
+            FILA = 2
+        else:
+            FILA = 0
+    return FILA

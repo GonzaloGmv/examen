@@ -53,13 +53,16 @@ while True:
     if turno == 0:
         if errorb1 == False and errorn1 == False:
             ejr2_func.movimiento(blanca1, 0, tablero)
+            blanca1 = ejr2_func.cambio_ficha(blanca1, 0, tablero)
             errorn1 = ejr2_func.encerrada(negra1, 0, tablero)
         elif errorb2 == False and errorn2 == False:
             ejr2_func.movimiento(blanca2, 1, tablero)
-            errorn2 = ejr2_func.encerrada(negra2, 0, tablero)  
+            blanca2 = ejr2_func.cambio_ficha(blanca2, 1, tablero)
+            errorn2 = ejr2_func.encerrada(negra2, 1, tablero)  
         elif errorb3 == False and errorn3 == False:
             ejr2_func.movimiento(blanca3, 2, tablero)
-            errorn3 = ejr2_func.encerrada(negra3, 0, tablero)
+            blanca3 = ejr2_func.cambio_ficha(blanca3, 2, tablero)
+            errorn3 = ejr2_func.encerrada(negra3, 2, tablero)
         else:
             print("Las blancas estan encerradas, ganan las negras")
             break
@@ -67,14 +70,17 @@ while True:
     elif turno == 1:
         if errorb1 == False and errorn1 == False:
             ejr2_func.movimiento(negra1, 0, tablero)
+            negra1 = ejr2_func.cambio_ficha(negra1, 0, tablero)
             errorb1 = ejr2_func.encerrada(blanca1, 0, tablero)
         elif errorb2 == False and errorn2 == False:
-            ejr2_func.movimiento(negra2, 1, tablero)  
+            ejr2_func.movimiento(negra2, 1, tablero)
+            negra2 = ejr2_func.cambio_ficha(negra2, 1, tablero)
             errorb2 = ejr2_func.encerrada(blanca2, 1, tablero) 
         elif errorb3 == False and errorn3 == False:
             ejr2_func.movimiento(negra3, 2, tablero)
+            negra3 = ejr2_func.cambio_ficha(negra3, 2, tablero)
             errorb3 = ejr2_func.encerrada(blanca3, 2, tablero)
         else:
             print("Las negras estan encerradas, ganan las blancas")
             break
-        turno = 1
+        turno = 0
