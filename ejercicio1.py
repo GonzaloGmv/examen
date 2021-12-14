@@ -25,8 +25,6 @@ for letras in palabra:
         else:
             puntos_stuart = puntos_stuart + len(palabra) - palabra.index(letras)
 
-print("Kevin: ", puntos_kevin)
-print("Stuart: ", puntos_stuart)
 if puntos_stuart > puntos_kevin:
     print("El ganador es Stuart, ha obtenido ", puntos_stuart, " puntos")
 elif puntos_kevin > puntos_stuart:
